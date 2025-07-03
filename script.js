@@ -1,17 +1,3 @@
-// Animação de texto na hero section
-const heroTitle = document.querySelector('.hero-content h1');
-if (heroTitle) {
-    heroTitle.innerHTML = heroTitle.textContent.split('').map(letter => 
-        `<span style="display: inline-block">${letter}</span>`
-    ).join('');
-
-    const letters = heroTitle.querySelectorAll('span');
-    letters.forEach((letter, i) => {
-        letter.style.animation = `fadeIn 0.5s ${i * 0.1}s forwards`;
-        letter.style.opacity = '0';
-    });
-}
-
 // Parallax suave no scroll
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
@@ -24,20 +10,16 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Smooth scroll com efeito suave
+// Smooth scroll nativo - removido o offset personalizado
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         
         if (target) {
-            const headerOffset = 100;
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition - headerOffset;
-
-            window.scrollBy({
-                top: offsetPosition,
-                behavior: 'smooth'
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
         }
     });
