@@ -136,7 +136,7 @@ const observador = new IntersectionObserver((entries) => {
 });
 
 // Elementos que receberão animações
-document.querySelectorAll('.servico-card, .depoimento-card, .problema-solucao-item, .numero').forEach(elemento => {
+document.querySelectorAll('.servico-card, .depoimento-card, .sobre-foto, .sobre-texto-container, .numero').forEach(elemento => {
     observador.observe(elemento);
 });
 
