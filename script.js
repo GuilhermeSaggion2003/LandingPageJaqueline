@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Smooth scroll nativo - removido o offset personalizado
+// Smooth scroll nativo
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
