@@ -52,13 +52,14 @@ document.querySelectorAll('.faq-item').forEach(item => {
     });
 });
 
-// Formulário de contato com validação e feedback visual
-const form = document.querySelector('.contato-form');
+const form = document.querySelector('#form-contato');
+
 if (form) {
     const inputs = form.querySelectorAll('input, textarea');
-    
+    const submitButton = form.querySelector('.submit-button');
+    const originalText = submitButton.textContent;
+
     inputs.forEach(input => {
-        // Adiciona efeito de label flutuante
         input.addEventListener('focus', () => {
             input.parentElement.classList.add('focused');
         });
@@ -69,7 +70,6 @@ if (form) {
             }
         });
 
-        // Validação em tempo real
         input.addEventListener('input', () => {
             if (input.checkValidity()) {
                 input.classList.remove('invalid');
@@ -81,32 +81,44 @@ if (form) {
         });
     });
 
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const submitButton = form.querySelector('.submit-button');
-        const originalText = submitButton.textContent;
-        
-        // Efeito de loading
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // impede o redirecionamento
+
         submitButton.textContent = 'Enviando...';
         submitButton.disabled = true;
-        
-        // Simula envio (substitua por sua lógica de envio real)
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // Feedback de sucesso
-        submitButton.textContent = 'Mensagem Enviada!';
-        submitButton.classList.add('success');
-        
-        // Reset do formulário
-        setTimeout(() => {
+
+        const formData = new FormData(form);
+
+        try {
+            await fetch('https://formsubmit.co/ajax/contato@jaquelinemoraes.com.br', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: formData
+            });
+
+            submitButton.textContent = 'Mensagem Enviada!';
+            submitButton.classList.add('success');
             form.reset();
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
-            submitButton.classList.remove('success');
-        }, 3000);
+
+            setTimeout(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                submitButton.classList.remove('success');
+            }, 3000);
+
+        } catch (error) {
+            submitButton.textContent = 'Erro ao enviar!';
+            submitButton.classList.add('error');
+
+            setTimeout(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                submitButton.classList.remove('error');
+            }, 3000);
+        }
     });
 }
+
 
 // Animação de elementos quando aparecem na tela
 const observador = new IntersectionObserver((entries) => {
