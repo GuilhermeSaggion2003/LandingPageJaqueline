@@ -2197,6 +2197,12 @@ h1, h2, .produtos-title, .faq-section h2 {
 }
 
 @media (max-width: 768px) {
+    .modulos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
     .detalhes-produto-destaque {
         font-size: 2rem;
     }
@@ -2342,6 +2348,19 @@ h1, h2, .produtos-title, .faq-section h2 {
 }
 
 @media (max-width: 480px) {
+    .modulos-grid {
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .modulo-card {
+        padding: 25px;
+    }
+    
+    .modulo-titulo {
+        font-size: 1.1rem;
+    }
+    
     .duvidas-title {
         font-size: 2.3rem;
     }
