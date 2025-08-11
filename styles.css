@@ -156,7 +156,9 @@ h1 {
 
 @media (max-width: 768px) {
     .hero-title-script {
-        font-size: 3rem;
+        font-size: 1.8rem;
+        line-height: 1.35;
+        padding: 0 8px;
     }
 
     .hero-description {
@@ -167,6 +169,14 @@ h1 {
     .cta-button {
         padding: 15px 30px;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title-script {
+        font-size: 1.6rem;
+        line-height: 1.35;
+        padding: 0 10px;
     }
 }
 
