@@ -41,13 +41,11 @@ document.querySelectorAll('.faq-item').forEach(item => {
         // Fecha todas as outras respostas
         document.querySelectorAll('.faq-item p').forEach(p => {
             p.style.maxHeight = '0';
-            p.parentElement.classList.remove('ativo');
         });
 
         // Abre/fecha a resposta clicada
         if (!isOpen) {
             resposta.style.maxHeight = resposta.scrollHeight + 'px';
-            item.classList.add('ativo');
         }
     });
 });
@@ -119,28 +117,11 @@ if (form) {
     });
 }
 
-
 // Animação de elementos quando aparecem na tela
 const observador = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visivel');
-            
-            // Adiciona efeito de contagem para números
-            if (entry.target.classList.contains('numero')) {
-                const numero = entry.target;
-                const valor = parseInt(numero.dataset.valor);
-                let atual = 0;
-                
-                const timer = setInterval(() => {
-                    atual += 1;
-                    numero.textContent = atual;
-                    
-                    if (atual >= valor) {
-                        clearInterval(timer);
-                    }
-                }, 2000 / valor);
-            }
         }
     });
 }, {
@@ -148,7 +129,7 @@ const observador = new IntersectionObserver((entries) => {
 });
 
 // Elementos que receberão animações
-document.querySelectorAll('.servico-card, .depoimento-card, .sobre-foto, .sobre-texto-container, .numero').forEach(elemento => {
+document.querySelectorAll('.servico-card, .depoimento-card, .sobre-foto, .sobre-texto-container').forEach(elemento => {
     observador.observe(elemento);
 });
 

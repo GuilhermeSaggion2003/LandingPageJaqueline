@@ -24,7 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/LOGO CIRCULAR 1.png">
-    <link rel="stylesheet" href="styles.css?v=2">    
+    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.2/src/lite-yt-embed.css">
+    <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.2/src/lite-yt-embed.js"></script>
 </head>
 <body>
 
@@ -34,13 +36,18 @@
             <h1 class="hero-title-script">Transforme Seus Sonhos em Realidade e Comece a Construir a Sua Liberdade Financeira em 12 Semanas</h1>
             <p class="hero-description">Descubra o único método que vai te ensinar a sair do desespero das contas e partir para a conquista de seus objetivos!</p>
             <div class="video-container">
-                <iframe 
+                <!--<iframe 
                     src="https://www.youtube.com/embed/zsdYStTpkAo?si=yyTRCOzS_HXEEt1g" 
                     title="Título do Vídeo" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
-                </iframe>
+                </iframe>-->
+                <lite-youtube 
+                    videoid="zsdYStTpkAo" 
+                    playlabel="Assistir vídeo institucional"
+                    params="rel=0&modestbranding=1">
+                </lite-youtube>
             </div>
             <a href="https://pay.hotmart.com/F101039412J" class="cta-button" target="_blank" rel="noopener">QUERO CONSTRUIR MEUS SONHOS AGORA</a>
         </div>
@@ -56,28 +63,28 @@
             <div class="servicos-grid">
                 <div class="servico-card">
                     <div class="servico-imagem">
-                        <img src="assets/crown-icon.svg" alt="Ícone de Coroa">
+                        <img src="assets/crown-icon.svg" alt="Ícone de Coroa" loading="lazy">
                     </div>
                     <h3 class="servico-nome">EU MEREÇO - AUTOESTIMA FINANCEIRA</h3>
                     <p class="servico-descricao">Desperte sua mentalidade de merecimento e elimine pensamentos limitantes que impedem você de conquistar seus tesouros. Você é merecedor de abundância!</p>
                 </div>
                 <div class="servico-card">
                     <div class="servico-imagem">
-                        <img src="assets/treasure-map-icon.svg" alt="Ícone de Mapa do Tesouro">
+                        <img src="assets/treasure-map-icon.svg" alt="Ícone de Mapa do Tesouro" loading="lazy">
                     </div>
                     <h3 class="servico-nome">QUADRO DO TESOURO - VISUALIZAÇÃO PODEROSA</h3>
                     <p class="servico-descricao">Crie seu quadro personalizado com fotos dos seus sonhos, valores e datas. A ferramenta visual que vai acelerar suas conquistas.</p>
                 </div>
                 <div class="servico-card">
                     <div class="servico-imagem">
-                        <img src="assets/target-icon.svg" alt="Ícone de Alvo">
+                        <img src="assets/target-icon.svg" alt="Ícone de Alvo" loading="lazy">
                     </div>
                     <h3 class="servico-nome">MÉTODO JADE - METAS INTELIGENTES</h3>
                     <p class="servico-descricao">Transforme sonhos vagos em objetivos específicos: Para Transformar o seu sonho em realidade é importante passar pelo Filtro de Sonhos JADE. E fazer com que essa Jornada possa ser Atingível, com Data e Especifica.</p>
                 </div>
                 <div class="servico-card">
                     <div class="servico-imagem">
-                        <img src="assets/graph-icon.svg" alt="Ícone de Gráfico">
+                        <img src="assets/graph-icon.svg" alt="Ícone de Gráfico" loading="lazy">
                     </div>
                     <h3 class="servico-nome">INVESTIMENTOS EFICIENTES</h3>
                     <p class="servico-descricao">Aprenda a investir com rendimento acima da inflação e faça seu dinheiro trabalhar para realizar seus sonhos mais rápido.</p>
@@ -251,7 +258,7 @@
             <div class="depoimentos-grid">
                 <div class="depoimento-card">
                     <div class="depoimento-video">
-                        <iframe 
+                        <!--<iframe 
                             width="100%" 
                             height="300" 
                             src="https://youtube.com/embed/4sKR8wAvjDU?si=bTVRJAgU-fdlrTCj" 
@@ -259,14 +266,19 @@
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
-                        </iframe>
+                        </iframe>-->
+                        <lite-youtube 
+                        videoid="4sKR8wAvjDU" 
+                        playlabel="Assistir depoimento Ana Paula"
+                        params="rel=0&modestbranding=1">
+                    </lite-youtube>
                     </div>
                     <h4 class="depoimento-nome">Adriana Moz</h4>
                     <p class="depoimento-texto">"Bom, minha vida mudou, principalmente na parte financeira. Estou conseguindo guardar dinheiro...,Eu aprendi a fazer investimento..., estou aprendendo a deixar de me julgar e acreditando mais em mim..."</p>
                 </div>
                 <div class="depoimento-card">
                     <div class="depoimento-video">
-                        <iframe 
+                        <!--<iframe 
                             width="100%" 
                             height="300" 
                             src="https://youtube.com/embed/x3753GadE58?si=gMJUnUI4yMUGWShz" 
@@ -274,14 +286,19 @@
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
-                        </iframe>
+                        </iframe>-->
+                        <lite-youtube 
+                            videoid="x3753GadE58" 
+                            playlabel="Assistir depoimento Carlos e Marina"
+                            params="rel=0&modestbranding=1">
+                        </lite-youtube>
                     </div>
                     <h4 class="depoimento-nome">Thales Moreira</h4>
                     <p class="depoimento-texto">"Eu acredito que foi principalmente relacionado à minha família, porque a cultura familiar foi o que mais pesou..., porque daí ela impactou diretamente no meu lado financeiro, no meu lado espiritual, que pra mim é muito valioso. E tem sido uma grande vitória... quando você não tem um caminho, você não sabe onde você quer ir, qual que é o caminho certo..., Hoje nós temos um plano de investimento, nós temos as nossas metas a cumprir pra chegar num resultado..."</p>
                 </div>
                 <div class="depoimento-card">
                     <div class="depoimento-video">
-                        <iframe 
+                       <!--<iframe 
                             width="100%" 
                             height="300" 
                             src="https://www.youtube.com/embed/nD_NIl_q_mM?si=v8rqni_kFDYcWwew" 
@@ -289,7 +306,12 @@
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
-                        </iframe>
+                        </iframe>-->
+                        <lite-youtube 
+                            videoid="nD_NIl_q_mM" 
+                            playlabel="Assistir depoimento Família Santos"
+                            params="rel=0&modestbranding=1">
+                    </lite-youtube>
                     </div>
                     <h4 class="depoimento-nome">Raquel Vieira</h4>
                     <p class="depoimento-texto">"O que mudou na minha vida foi a questão de planejamento..., o planejamento financeiro, a planilha foi incrível, porque nós vimos que tínhamos gastos que poderiam ser cortados ou poderiam ser amenizados..., essa planilha me ajudou muito a saber quanto investir e como investir..., agora um sabe o financeiro do outro, e também a questão de organizar a nossa vida conjugal.., a mentalidade da Raquel mudou em relação a tudo, porque não foi só um curso para as minhas finanças, foi um curso para ter a comunhão com a minha família..."</p>
@@ -312,7 +334,7 @@
                 <div class="sobre-grid-moderno">
                     <div class="sobre-imagem-moderna">
                         <div class="sobre-foto-wrapper">
-                            <img src="assets/Jaqueline Moraes (498).jpeg" alt="Jaqueline Moraes - Mentora dos Seus Sonhos" class="sobre-foto-moderna">
+                            <img src="assets/Jaqueline Moraes (498).jpeg" alt="Jaqueline Moraes - Mentora dos Seus Sonhos" class="sobre-foto-moderna" loading="lazy">
                             <div class="sobre-foto-overlay"></div>
                         </div>
                         
@@ -486,7 +508,7 @@
     <section id="contato" class="contato-section">
         <div class="contato-content novo-contato-layout">
             <div class="contato-form-side">
-                <img src="assets/Jaqueline Moraes (528).jpg" alt="Mulher Empresária" class="contato-foto-lado">
+                <img src="assets/Jaqueline Moraes (528).webp" alt="Mulher Empresária" class="contato-foto-lado" loading="lazy">
             </div>
             <div class="contato-form-box">
                 <h2 class="contato-titulo">
@@ -519,7 +541,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <div class="footer-logo">
-                    <img src="assets/LOGO HORIZONTAL 1.png" alt="Logo" style="height:60px; width:auto; display:block;" />
+                    <img src="assets/LOGO HORIZONTAL 1.png" alt="Logo" style="height:60px; width:auto; display:block;" loading="lazy" />
                 </div>
                 <p class="footer-description">
                     Transformando vidas através de soluções personalizadas e resultados excepcionais.
@@ -599,7 +621,7 @@
     </footer>
 
     <a href="https://wa.me/5511919434157" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"  />
     </a>
 
     <script src="script.js"></script>
